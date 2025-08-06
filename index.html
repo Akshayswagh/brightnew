@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bright Cabs India</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo1.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    .services-section {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: #f7941e;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: #3b7ddd;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 8px;
+} */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 15px;
+  color: #3b3b3b;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 15px 20px 15px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+
+  .service-card img {
+    height: 160px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .services-section {
+    padding: 40px 10px;
+  }
+
+  .service-card img {
+    height: 140px;
+  }
+}
+/*  */
+      .car-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-bottom: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .car-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      }
+      .car-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      .car-card-body {
+        padding: 20px 15px;
+      }
+      .car-card-body h4 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 0;
+        color: #333;
+      }
+      .car-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-bottom: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+        width: 100%; /* Make card fill the column */
+        display: flex; /* Make the card a flex container */
+        flex-direction: column; /* Stack image and body vertically */
+      }
+      .car-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      }
+
+      /* --- THIS IS THE KEY CHANGE --- */
+      .car-card img {
+        height: 180px; /* You can adjust this value */
+        width: 100%;
+        object-fit: cover; /* This crops the image to fit without stretching */
+      }
+      /* ----------------------------- */
+
+      .car-card-body {
+        padding: 20px 15px;
+        flex-grow: 1; /* Allows the body to grow and push the footer (if any) down */
+      }
+      .car-card-body h4 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 0;
+        color: #333;
+      }
+    </style>
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ 
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+       <img src="assets/img/logo1.png" class="img-responsive" style="padding: 0px 7px 2px -9px; width: 100%; max-width: 130px">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-page-img.jpeg" alt="" data-aos="fade-in">
+
+      <div class="container d-flex flex-column align-items-center">
+        <h2 data-aos="fade-up" data-aos-delay="100" style="font-size:x-large;">
+Powering Corporate Commutes Since 1997
+
+.</h2>
+<br>
+        <p data-aos="fade-up" data-aos-delay="200">Built for business, Backed by systems & Delivered with care.</p>
+       
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h4>About Us</h4>
+            <!-- <h2 style="color: orange;">Bright Cabs</h2> -->
+            <img src="assets/img/car2.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <p>Bright Urban Mobility Private Limited, popularly known as Bright Cabs, is a trusted name in corporate commute and employee transportation services since 1997. Formerly known as Om Sai Travels, established in 1997 and reconstituted as Bright Urban Mobility Private Limited in the year of 2022.</p>
+            <p>With over two decades of experience, we have been at the forefront of transforming how organizations move their people safely, punctually, and efficiently..</p>
+            <p>
+               Headquartered in Kharadi, Pune, Maharashtra, Bright Cabs specializes in providing customized transport solutions to leading corporates, IT/ITES companies, and business parks across India. Our commitment to safety, reliability, and round-the-clock service has earned us long-standing partnerships with some of the most respected names in the industry.
+              </p>
+                <p>
+               From deploying GPS-enabled fleets to offering real-time ride tracking and automated rostering, we combine technology with dependable service to ensure seamless mobility for employees and peace of mind for our clients.
+              </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p>
+               At Bright Cabs, we believe in sustainable and smart mobility. Our fleet includes a mix of sedans, MUVs, and electric vehicles to support green transportation initiatives.
+              </p>
+              <ul>
+                   <li><i class="bi bi-check-circle-fill"></i> <span>27+ Years Of Experience</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>OPERATIONS TEAM</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>QRT TEAM</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>CONTROL ROOM</span></li>
+                   <li><i class="bi bi-check-circle-fill"></i> <span>Hr & CRM DEPARTMENT</span></li>
+              </ul>
+            
+
+              <div class="position-relative mt-4">
+                <img src="assets/img/car3.jpg" class="img-fluid rounded-4" alt="">
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-headset color-green flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-people color-pink flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section" >
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" >
+        <h2>Services</h2>
+        <p>Features<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5" style="justify-content: center;">
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/sarvices1.webp" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <!-- <a href="service-details.html" class="stretched-link"> -->
+                  <h3>First Class Service</h3>
+                </a>
+                <p>We provide top-tier services focused on reliability, professionalism, and customer satisfaction.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/sarvices2.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <!-- <a href="service-details.html" class="stretched-link"> -->
+                  <h3>Quality at Minimum</h3>
+                </a>
+                <p>
+                  Quality at Minimum Experience premium quality services and solutions at the most affordable prices.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/sarvices3.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <!-- <a href="service-details.html" class="stretched-link"> -->
+                  <h3>24/7 road assistance</h3>
+                </a>
+                <p>  24/7 road assistance No matter the time or place, our dedicated support team is ready to assist you.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400" >
+            <div class="service-item" >
+              <div class="img">
+                <img src="assets/img/sarvices4.webp" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <!-- <a href="service-details.html" class="stretched-link"> -->
+                  <h3>Free Pick-Up & Drop-Off</h3>
+                </a>
+                <p>Enjoy hassle-free service with our complimentary pick-up and drop-off facility.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/1.webp" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/2.webp" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/3.webp" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/4.webp" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/5.webp" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/6.webp" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+      
+
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+
+    
+    
+    <section id="our-services" class="services-section">
+       <div class="container section-title" data-aos="fade-up">
+        <h2>OUR SERVICES</h2>
+        <p>OUR Services<br></p>
+      </div><!-- End Section Title -->
+
+  <div class="container">
+    <!-- <p class="section-subtitle">OUR SERVICES</p>
+    <h2 class="section-title">Bright Cabs Services</h2> -->
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <img src="assets/img/s1.jpg" alt="Employee Transportation">
+        <h3>Employee Transportation</h3>
+        <p>
+          Safe, timely, and tech-driven commute solutions for corporates and IT firms, with real-time tracking and 24/7 support.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <img src="assets/img/s2.webp" alt="Corporate Car Rental">
+        <h3>Corporate Car Rental</h3>
+        <p>
+          Premium sedans, SUVs, and chauffeured rides for executive pick-ups, meetings, and inter-office travel.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <img src="assets/img/s3.webp" alt="Airport Transfers">
+        <h3>Airport Transfers</h3>
+        <p>
+          Reliable airport drop & pick-up services with live flight tracking for a smooth travel experience.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <img src="assets/img/s4.webp" alt="Long-Term Car Rental">
+        <h3>Long-Term Car Rental</h3>
+        <p>
+          Flexible vehicle plans for project staff or directors—available with or without chauffeurs.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card">
+        <img src="assets/img/s5.jpg" alt="Event Transportation">
+        <h3>Event Transportation</h3>
+        <p>
+          Complete logistics for conferences, team outings, and VIP movement with punctual fleet coordination.
+        </p>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <img src="assets/img/s6.webp" alt="EV Transportation">
+        <h3>Electric Vehicle (EV) Transportation</h3>
+        <p>
+          Eco-friendly EV fleet to reduce carbon footprint while offering comfort and efficiency across services.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Services 2 Section -->
+    <section id="services-2" class="services-2 section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>
+Why Choose Bright Cabs?
+</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+             <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">27+ Years of Experience</a></h4>
+                <p class="description">Established in 1997, Bright Cabs brings decades of expertise in corporate mobility and employee transportation.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Specialists in Corporate Commute</a></h4>
+                <p class="description">We focus exclusively on business transportation—understanding the needs of corporates, BPOs, IT firms, and manufacturing units.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100">
+             <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Reliable & On-Time Service</a></h4>
+                <p class="description">Punctuality is our promise. Our advanced routing systems and disciplined operations ensure timely pick-ups and drop-offs.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+             <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Tech-Enabled Operations</a></h4>
+                <p class="description">Real-time GPS tracking, automated scheduling, mobile app integrations, and centralized dispatch make our service seamless and efficient.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex position-relative h-100">
+            <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link"></a>Diverse Fleet Options</h4>
+                <p class="description">Choose from a wide range of vehicles: Sedans, SUVs, MUVs, Tempo Travellers, and Electric Vehicles—maintained to high safety and cleanliness standards.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+             <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">24x7 Customer Support</a></h4>
+                <p class="description">Round-the-clock support to handle emergencies, late-night shifts, and last-minute changes without compromising on service quality.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+             <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Safety First Approach</a></h4>
+                <p class="description">Driver background verification, vehicle fitness checks, panic buttons, and trip monitoring systems ensure the safety of every rider.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+             <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Sustainable Mobility Partner</a></h4>
+                <p class="description">We are committed to green transport with a growing Electric Vehicle (EV) fleet supporting eco-conscious corporate goals.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+           <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Customizable Solutions</a></h4>
+                <p class="description">From employee shuttles to VIP transfers, our services can be tailored to meet your company’s specific transportation policies and budgets.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Trusted by Leading Corporates</a></h4>
+                <p class="description">Bright Cabs is the preferred partner for several top-tier companies, a testament to our quality, consistency, and customer-first mindset.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services 2 Section -->
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      
+
+      <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+        <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>CHECK OUR PORTFOLIO</p>
+      </div><!-- End Section Title -->
+        </div>
+        <div class="row">
+          <!-- Fleet Item 1 -->
+          <div
+            class="col-md-6 col-lg-4 ftco-animate d-flex align-items-stretch"
+          >
+            <div class="car-card">
+              <img
+                src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/159231/swift-right-front-three-quarter.jpeg?isig=0&q=80"
+                alt="Maruti Swift"
+                style="width: 100%;"
+              />
+              <div class="car-card-body">
+                <h4>Maruti Swift</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Fleet Item 2 -->
+          <div
+            class="col-md-6 col-lg-4 ftco-animate d-flex align-items-stretch"
+          >
+            <div class="car-card">
+              <img
+                src="https://static.toiimg.com/thumb/msid-65309161,width-400,resizemode-4/65309161.jpg"
+                alt="Toyota Etios"
+              />
+              <div class="car-card-body">
+                <h4>Toyota Etios</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Fleet Item 3 -->
+          <div
+            class="col-md-6 col-lg-4 ftco-animate d-flex align-items-stretch"
+          >
+            <div class="car-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlBT1LwBhCAu2Zqfzq-UDduhLDmA3IW-lWAg&s"
+                alt="Maruti Ertiga"
+              />
+              <div class="car-card-body">
+                <h4>Maruti Ertiga</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Fleet Item 4 -->
+          <div
+            class="col-md-6 col-lg-4 ftco-animate d-flex align-items-stretch"
+          >
+            <div class="car-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4tY2wDV2b2QTDyp7exv74yvT7itRXVg8oew&s"
+                alt="Toyota Innova"
+              />
+              <div class="car-card-body">
+                <h4>Toyota Innova</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Fleet Item 5 -->
+          <div
+            class="col-md-6 col-lg-4 ftco-animate d-flex align-items-stretch"
+          >
+            <div class="car-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2I63Z6TpGa4hO8ifqranW8HPeyV5yDhSX8w&s"
+                alt="Honda City"
+              />
+              <div class="car-card-body">
+                <h4>Honda City</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Fleet Item 6 -->
+          <div
+            class="col-md-6 col-lg-4 ftco-animate d-flex align-items-stretch"
+          >
+            <div class="car-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR971Ffowz7MsUm9-7vcfRmWp9P2yQOmB-dag&s"
+                alt="Tempo Traveller"
+              />
+              <div class="car-card-body">
+                <h4>Tempo Traveller</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </section><!-- /Portfolio Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p> Office No. 504, 4th Floor, Mega Centre, Pune Solapur Road, Pune – 411013. Maharashtra, India</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>	+91 98222 62426</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>	info@brightcabsindia.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bright Cab</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>The solution envisioned by Bright Urban Mobility Travels features a travel program and service delivery commensurate with the expectations of your employees and bringing convenience to the lives of your employees.</p>
+             
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#about">About </a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Cars</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact us</a></li>
+          </ul>
+        </div>
+
+     
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Contact Info</h4>
+          <p>	Corporate Office: Office No. 504, 4th Floor, Mega Centre, Pune Solapur Road, Pune – 411013. Maharashtra, India</p>
+             <p>	Branch Office: Office No. 302, Vasundhara Plaza, Vishal Nagar, Pimple Nilakh, Pune – 411027. Maharashtra, India.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>	+91 98222 62426</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>		+91 20 6623 5500</span></p>
+            <p><strong>Email:</strong> <span>	info@brightcabsindia.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename"> 2025 Bright Urban Mobility</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      
+          <p>GPT Softwares</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
