@@ -71,15 +71,23 @@
   border-radius: 8px;
 } */
 
-.services-grid {
+/* .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  /* Center the grid items horizontally */
   justify-content: center; 
-}
+} */
 
+.services-grid {
+  display: flex;         /* The magic starts here! */
+  flex-wrap: wrap;       /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the last row if it's not full */
+  gap: 25px;             /* Adds consistent space between all cards */
+}
 .service-card {
+  display: flex;
+  flex-direction: column; /* Arrange items top-to-bottom */
+  width: 350px; 
   background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -110,6 +118,9 @@
   color: #555;
   margin: 0 15px 20px 15px;
   line-height: 1.6;
+  
+  flex-grow: 1; 
+
 }
 
 /* Responsive Design */
