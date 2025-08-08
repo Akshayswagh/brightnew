@@ -25,290 +25,295 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
    <!-- Font Awesome CDN Link (for icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    /* --- CTA Button Style (Orange Theme) --- */
-.cta-btn {
-  display: inline-block;
-  background-color: #E67E22; /* Vibrant Orange Background */
-  color: #ffffff;           /* White text color */
-  padding: 12px 24px;
-  margin-top: 15px;
-  border-radius: 5px;width: 100%;
-
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* --- Hover effect: Background darkens, text color does NOT change --- */
-.cta-btn:hover {
-  background-color: #D35400; 
-  color: #ffffff; /* Darker orange on hover */
-}
-    .services-section {
-  padding: 60px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-.section-subtitle {
-  color: #f7941e;
-  font-weight: 600;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-/* .section-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  background: #3b7ddd;
-  color: #fff;
-  display: inline-block;
-  padding: 10px 25px;
-  border-radius: 8px;
-} */
-
-/* .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-content: center; 
-} */
-
-.services-grid {
-  display: flex;         /* The magic starts here! */
-  flex-wrap: wrap;       /* Allows cards to wrap to the next line */
-  justify-content: center; /* Centers the last row if it's not full */
-  gap: 25px;             /* Adds consistent space between all cards */
-}
-.service-card {
-  display: flex;
-  flex-direction: column; /* Arrange items top-to-bottom */
-  width: 350px; 
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-.service-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.service-card h3 {
-  font-size: 18px;
-  margin: 15px;
-  color: #3b3b3b;
-}
-
-.service-card p {
-  font-size: 14px;
-  color: #555;
-  margin: 0 15px 20px 15px;
-  line-height: 1.6;
   
-  flex-grow: 1; 
-
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 24px;
-    padding: 8px 16px;
-  }
-
-  .service-card img {
-    height: 160px;
-  }
-
-  .service-card h3 {
-    font-size: 16px;
-  }
-
-  .service-card p {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 20px;
-  }
-
-  .services-section {
-    padding: 40px 10px;
-  }
-
-  .service-card img {
-    height: 140px;
-  }
-}
-/*  */
-      .car-card {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-        overflow: hidden;
-        margin-bottom: 30px;
-        text-align: center;
-        transition: all 0.3s ease;
-      }
-      .car-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-      }
-      .car-card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-    
-      .car-card {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-        overflow: hidden;
-        margin-bottom: 30px;
-        text-align: center;
-        transition: all 0.3s ease;
-        width: 100%; /* Make card fill the column */
-        display: flex; /* Make the card a flex container */
-        flex-direction: column; /* Stack image and body vertically */
-      }
-      .car-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-      }
-
-      /* --- THIS IS THE KEY CHANGE --- */
-      .car-card img {
-        height: 220px; /* You can adjust this value */
-        width: 100%;
-        object-fit: cover; /* This crops the image to fit without stretching */
-      }
-      /* ----------------------------- */
-
-     
-/* --- Car Card Basic Styling --- */
-.car-card {
-  width: 100%; 
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
-
-/* --- The container that hides text --- */
-.car-info-container {
-  padding: 15px;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative; /* IMPORTANT: Yeh '::after' ko position karne ke liye zaroori hai */
-}
-
-/* --- Styling for the gradient text --- */
-.car-info-container h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  display: inline-block; 
-  
-  
-  background: linear-gradient(to right, #6a11cb, #2575fc, #f9ce34);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-size: 200% auto;
-}
-
-/* --- NEW: Hamara apna '...' jo Red color ka hai --- */
-.car-info-container::after {
-  position: absolute; /* Isse hum ise azaadi se position kar sakte hain */
-  right: 15px; /* Right se 15px (padding ke barabar) */
-  top: 15px;  /* Top se 15px (padding ke barabar) */
-  color: red; /* Iska color RED hai! */
-  background: #fff; /* White background taaki peeche ka gradient text na dikhe */
-  padding-left: 5px; /* Thodi si spacing */
-  z-index: 1; /* Yeh hamesha text ke upar rahega */
-}
-
-
-
-/* 2. Text slide hona shuru ho jayega */
-.car-card:hover .car-info-container h4 {
-  animation: scroll-text-responsive 10s linear infinite alternate;
-}
-
-/* --- Animation (No Change) --- */
-@keyframes scroll-text-responsive {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}   
-
-
-/* --- WhatsApp Floating Icon --- */
-.whatsapp-float {
-     position: fixed;
-    width: 50px;
-    height: 50px;
-    bottom: 63px;
-    right: 11px; /* Right se spacing */
-  background-color: #25D366; /* WhatsApp ka official green color */
-  color: #FFF; /* Icon ka color (white) */
-  border-radius: 50%; /* Isse yeh gol ho jayega */
-  text-align: center;
-  font-size: 30px; /* Icon ka size */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25); /* Thodi si shadow */
-  z-index: 1000; /* Yeh hamesha sabse upar rahega */
-  
-  /* Icon ko bilkul center mein laane ke liye */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  /* Hover effect ke liye smooth transition */
-  transition: transform 0.2s ease-in-out;
-}
-
-/* --- Hover Effect: Jab mouse icon par jayega --- */
-.whatsapp-float:hover {
-  transform: scale(1.1); /* Icon thoda sa bada ho jayega */
-}</style>
-
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
- 
+  <style>
+    /* --- NEW CSS FOR TOP BAR --- */
+    /* ======= Top Bar ======= */
+    #topbar {
+      background: #212529; /* Dark, clean background */
+      font-size: 14px;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
+    #topbar .contact-info i {
+      color: #E67E22; /* Theme Orange */
+      padding-right: 6px;
+    }
+
+    #topbar .contact-info a {
+      color: rgba(255, 255, 255, 0.8);
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    #topbar .contact-info a:hover {
+      color: #fff;
+    }
+
+    #topbar .contact-info .phone-info {
+      padding-left: 20px;
+      margin-left: 20px;
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    /* --- Header & Main Content Adjustments --- */
+    /* Push header down and add margin to main content to prevent overlap */
+    #header.fixed-top {
+      top: 50px;
+    }
+
+    .main {
+      /* margin-top: 50px; */
+    }
+
+    /* --- Responsive Adjustments for Top Bar & Header --- */
+    @media (max-width: 991px) {
+      #topbar {
+        height: auto;
+        padding: 12px 0;
+      }
+      
+      #topbar .contact-info {
+        justify-content: center !important; /* Force center alignment */
+        flex-wrap: wrap; /* Allow items to stack */
+        gap: 15px; /* Add space between stacked items */
+      }
+
+      #topbar .contact-info .phone-info {
+        padding-left: 0;
+        margin-left: 0;
+        border-left: none;
+      }
+      
+      /* On mobile, make header scroll with the page for better UX */
+      #header, #header.fixed-top {
+        position: static;
+      }
+
+      .main {
+        margin-top: 0; /* Reset margin since header is not fixed */
+      }
+    }
+    /* --- END OF NEW CSS --- */
+
+
+    /* --- CTA Button Style (Orange Theme) --- */
+    .cta-btn {
+      display: inline-block;
+      background-color: #E67E22; /* Vibrant Orange Background */
+      color: #ffffff;           /* White text color */
+      padding: 12px 24px;
+      margin-top: 15px;
+      border-radius: 5px;width: 100%;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    /* --- Hover effect: Background darkens, text color does NOT change --- */
+    .cta-btn:hover {
+      background-color: #D35400; 
+      color: #ffffff; /* Darker orange on hover */
+    }
+    .services-section {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      color: #f7941e;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .services-grid {
+      display: flex;         /* The magic starts here! */
+      flex-wrap: wrap;       /* Allows cards to wrap to the next line */
+      justify-content: center; /* Centers the last row if it's not full */
+      gap: 25px;             /* Adds consistent space between all cards */
+    }
+    .service-card {
+      display: flex;
+      flex-direction: column; /* Arrange items top-to-bottom */
+      width: 350px; 
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin: 15px;
+      color: #3b3b3b;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #555;
+      margin: 0 15px 20px 15px;
+      line-height: 1.6;
+      flex-grow: 1; 
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 24px;
+        padding: 8px 16px;
+      }
+      .service-card img { height: 160px; }
+      .service-card h3 { font-size: 16px; }
+      .service-card p { font-size: 13px; }
+    }
+
+    @media (max-width: 480px) {
+      .section-title { font-size: 20px; }
+      .services-section { padding: 40px 10px; }
+      .service-card img { height: 140px; }
+    }
+
+    .car-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .car-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+    .car-card img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .car-card {
+      width: 100%; 
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .car-info-container {
+      padding: 15px;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+    .car-info-container h4 {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      display: inline-block; 
+      background: linear-gradient(to right, #6a11cb, #2575fc, #f9ce34);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 200% auto;
+    }
+    .car-info-container::after {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      color: red;
+      background: #fff;
+      padding-left: 5px;
+      z-index: 1;
+    }
+    .car-card:hover .car-info-container h4 {
+      animation: scroll-text-responsive 10s linear infinite alternate;
+    }
+    @keyframes scroll-text-responsive {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }   
+
+    .whatsapp-float {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 63px;
+      right: 11px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s ease-in-out;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
 
 </head>
 
 <body class="index-page">
 
+ <!-- ======= Top Bar ======= -->
+<div id="topbar">
+  <!-- Use justify-content-end to always push the content to the right. -->
+  <!-- Use align-items-center to keep it vertically centered. -->
+  <div class="container d-flex justify-content-end align-items-center">
+    <div class="contact-info d-flex align-items-center">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:info@brightcabsindia.com">info@brightcabsindia.com</a>
+      </div>
+      <div class="d-flex align-items-center phone-info">
+        <i class="bi bi-telephone-fill"></i>
+        <a href="tel:+919822262426">+91 98222 62426</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Top Bar -->
+
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-       <img src="assets/img/logo1.png" class="img-responsive" style="padding: 0px 7px 2px -9px; width: 100%; max-width: 130px">
+        <img src="assets/img/logo1.png" class="img-responsive" style="padding: 0px 7px 2px -9px; width: 100%; max-width: 130px">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -322,7 +327,6 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
 
     </div>
   </header>
@@ -873,7 +877,7 @@ Why Choose Bright Cabs?
                 <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                  <p> Office No. 504, 4th Floor, Mega Centre, Pune Solapur Road, Pune – 411013. Maharashtra, India</p>
+                  <p> Vittlal Heights Office No 106, Opposite Blue Raddisson Blue, Kharadi, Pune – 411015</p>
                 </div>
               </div><!-- End Info Item -->
 
