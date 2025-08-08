@@ -70,7 +70,7 @@
     /* --- Header & Main Content Adjustments --- */
     /* Push header down and add margin to main content to prevent overlap */
     #header.fixed-top {
-      top: 50px;
+      top: 43px;
     }
 
     .main {
@@ -82,6 +82,7 @@
       #topbar {
         height: auto;
         padding: 12px 0;
+        z-index: 10000;
       }
       
       #topbar .contact-info {
@@ -96,15 +97,25 @@
         border-left: none;
       }
       
-      /* On mobile, make header scroll with the page for better UX */
-      #header, #header.fixed-top {
-        position: static;
-      }
+     
 
       .main {
         margin-top: 0; /* Reset margin since header is not fixed */
       }
     }
+    @media (max-width: 400px) {
+       /* On mobile, make header scroll with the page for better UX */
+      #header, #header.fixed-top {
+        position: static;
+        background-color: transparent;
+      }
+      .scrolled .header {
+    --background-color: rgba(21, 34, 43, 0.85);
+}
+      #topbar{
+        position: static;
+      }
+      }
     /* --- END OF NEW CSS --- */
 
 
