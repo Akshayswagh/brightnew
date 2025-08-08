@@ -106,15 +106,16 @@
     @media (min-width: 200px) and (max-width: 400px) {
        /* On mobile, make header scroll with the page for better UX */
       #header, #header.fixed-top {
-        position: static;
+        position: sticky;
         z-index: 1000;
+        top: 0;
       }
       .scrolled .header {
     --background-color: rgba(21, 34, 43, 0.85);
     z-index: 1000;
 }
       #topbar{
-        position: sticky;
+        position: static;
       }
       }
     /* --- END OF NEW CSS --- */
