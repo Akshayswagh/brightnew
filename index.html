@@ -82,7 +82,6 @@
       #topbar {
         height: auto;
         padding: 12px 0;
-        z-index: 10000;
       }
       
       #topbar .contact-info {
@@ -107,7 +106,7 @@
     @media (min-width: 200px) and (max-width: 400px) {
        /* On mobile, make header scroll with the page for better UX */
       #header, #header.fixed-top {
-        position: sticky;
+        position: static;
         z-index: 1000;
       }
       .scrolled .header {
