@@ -74,7 +74,7 @@
     }
 
     .main {
-      /* margin-top: 50px; */
+      margin-top: 0;
     }
 
     /* --- Responsive Adjustments for Top Bar & Header --- */
@@ -103,17 +103,19 @@
         margin-top: 0; /* Reset margin since header is not fixed */
       }
     }
-    @media (max-width: 400px) {
+
+    @media (min-width: 200px) and (max-width: 400px) {
        /* On mobile, make header scroll with the page for better UX */
       #header, #header.fixed-top {
-        position: static;
-        background-color: transparent;
+        position: sticky;
+        z-index: 1000;
       }
       .scrolled .header {
     --background-color: rgba(21, 34, 43, 0.85);
+    z-index: 1000;
 }
       #topbar{
-        position: static;
+        position: sticky;
       }
       }
     /* --- END OF NEW CSS --- */
